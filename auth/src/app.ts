@@ -4,10 +4,9 @@ import { currentUserRouter } from "./routes/current-user";
 import { signinRouter } from "./routes/signin";
 import { signupRouter } from "./routes/signup";
 import { signoutRouter } from "./routes/signout";
-import { errorHandler } from "./middlewares/error-handler";
-import { NotFoundEror } from "./errors/not-found-error";
 import "express-async-errors";
 import cookieSession from "cookie-session";
+import { NotFoundEror, errorHandler } from "@ducnguyen96/ticketing-common";
 
 const app = express();
 app.use(json());
