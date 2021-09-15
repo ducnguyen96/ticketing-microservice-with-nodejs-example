@@ -5,6 +5,7 @@ import { User } from "../models/users";
 import { Password } from "../services/password";
 import jwt from "jsonwebtoken";
 import { validateRequest } from "../middlewares/validate-request";
+import "express-async-errors";
 
 const router = express.Router();
 
