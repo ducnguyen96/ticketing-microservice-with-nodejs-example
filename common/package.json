@@ -1,6 +1,6 @@
 {
   "name": "@ducnguyen96/ticketing-common",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "scripts": {
     "clean": "del ./build/*",
