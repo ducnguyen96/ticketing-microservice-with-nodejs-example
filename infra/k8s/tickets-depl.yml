@@ -23,7 +23,7 @@ spec:
                   name: jwt-secret
                   key: JWT_KEY
             - name: MONGO_URI
-              value: "mongodb://auth-mongo-srv:27017/auth"
+              value: "mongodb://tickets-mongo-srv:27017/tickets"
             - name: NATS_CLIENT_ID
               valueFrom:
                 fieldRef:
