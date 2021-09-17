@@ -1,6 +1,7 @@
 import { Mongoose } from "mongoose";
 import request from "supertest";
 import { app } from "../../app";
+import { natsWrapper } from "../../nats-wrapper";
 
 it("returns a 404 if the provided id does not exist", async () => {
   const mongoose = new Mongoose();
@@ -54,7 +55,7 @@ it("returns a 400 if the user provides an invalid title or price", async () => {
     .expect(400);
 });
 
-it("updates the ticket provided valida inputs", async () => {
+it("updates the ticket provided valid inputs", async () => {
   const cookie = global.signin();
 
   const res = await request(app)
@@ -74,4 +75,5 @@ it("updates the ticket provided valida inputs", async () => {
 
   expect(updatedTicket.body.title).toEqual("Bohemium updated");
   expect(updatedTicket.body.price).toEqual(203);
+  expect(natsWrapper.client.publish).toHaveBeenCalled();
 });
