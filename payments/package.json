@@ -1,5 +1,5 @@
 {
-  "name": "orders",
+  "name": "payments",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,7 +12,8 @@
     "testEnvironment": "node",
     "setupFilesAfterEnv": [
       "./src/test/setup.ts"
-    ]
+    ],
+    "testTimeout": 15000
   },
   "keywords": [],
   "author": "",
@@ -28,7 +29,8 @@
     "express-async-errors": "^3.1.1",
     "express-validator": "^6.12.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "6.0.4",
+    "mongoose": "^6.0.5",
+    "stripe": "^8.176.0",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.4.3"
   },

@@ -1,0 +1,14 @@
+export const stripe = {
+  charges: {
+    create: jest
+      .fn()
+      .mockImplementation(
+        (
+          params: { currency: string; amount: number; source: string },
+          callback: () => void
+        ) => {
+          callback();
+        }
+      ),
+  },
+};
